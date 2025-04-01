@@ -48,21 +48,19 @@ public final class Constants
   public static class OperatorConstants
   {
 
-    // Joystick Deadband
-    public static final double DEADBAND        = 0.1;
-    public static final double LEFT_Y_DEADBAND = 0.1;
-    public static final double RIGHT_X_DEADBAND = 0.1;
-    public static final double TURN_CONSTANT    = 6;
-
-    public static final int kDriverControllerPort = 0;
+  // Joystick Deadband
+  public static final double DEADBAND        = 0.1;
+  public static final double LEFT_Y_DEADBAND = 0.1;
+  public static final double RIGHT_X_DEADBAND = 0.1;
+  public static final double TURN_CONSTANT    = 6;
+  public static final int kDriverControllerPort = 0;
   public static final int kOperatorControllerPort = 1;
 
-  public static final int Joint1MotorID = 17; // CAN ID for Joint 1 motor   this one
-  public static final int Joint2MotorID = 24; 
-  public static final int cageMotorID = 13; // CAN ID for cage motor   
-  public static final int intakeMotorID2 = 15; // CAN ID for intake motor 2   
-  public static final int ballintakeID = 16;
-  public static final int clawMotorID = 19; // CAN ID for claw motor
+  public static final int wristMotorID = 19; // CAN ID for wrist motor
+  public static final int ballintakeID = 21; // CAN ID for ball intake motor
+  public static final int coralMotorID = 16; // CAN ID for coral subsystem motor 
+  public static final int Pivot1MotorID = 22; // CAN ID for Pivot 1 motor
+  public static final int Pivot2MotorID = 24; // CAN ID for Pivot 2 motor
 
   }
   public static class PIDConstants {

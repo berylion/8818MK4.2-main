@@ -21,11 +21,6 @@ import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.Constants.OperatorConstants;
-import frc.robot.commands.JogJoint1Command;
-import frc.robot.commands.ResetEncoderCommand;
-import frc.robot.commands.SetJoint1AngleCommand;
-import frc.robot.commands.SetRestAngleCommand;
-import frc.robot.subsystems.Joint1Subsystem;
 import frc.robot.subsystems.swervedrive.SwerveSubsystem;
 import java.io.File;
 import swervelib.SwerveInputStream;
@@ -42,7 +37,6 @@ public class RobotContainer
 {
    private SendableChooser<String> autoChooser;
      // The robot's subsystems and commands are defined here...
-     final Joint1Subsystem joint1Subsystem = new Joint1Subsystem();
 
      // Replace with CommandPS4Controller or CommandJoystick if needed
      final CommandXboxController m_driverController =
@@ -207,16 +201,8 @@ public class RobotContainer
      // Assign button X to reset the encoder
   //   m_driverController.x().onTrue(new ResetEncoderCommand(joint1Subsystem));
 
-     m_driverController.rightBumper().whileTrue(new JogJoint1Command(joint1Subsystem, 0.5));
-
-     m_driverController.leftBumper().whileTrue(new JogJoint1Command(joint1Subsystem, -0.35));
-
-     m_driverController.a().whileTrue(new JogJoint1Command(joint1Subsystem, 0.55));
   }
 
-  public Joint1Subsystem getJoint1Subsystem() {
-    return joint1Subsystem;
-  }
 
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.
